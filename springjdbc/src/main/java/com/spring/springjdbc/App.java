@@ -12,20 +12,27 @@ public class App {
 		System.out.println("Hello World!");
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/springjdbc/config.xml");
-		
+
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
+
+//		Student student = new Student();
+//		student.setId(39);
+//		student.setName("Mayur Rajput");
+//		student.setCity("Pune");
+//
+//		int result = studentDao.insert(student);
+//
+//		System.out.println("Student Added :" + result);
 		
 		Student student = new Student();
-		student.setId(348);
-		student.setName("Vidya");
-		student.setCity("Mumbai");
+		student.setId(47);
+		student.setName("Vidya Rajput");
+		student.setCity("Ghoti");
+		int  result = studentDao.updation(student); 
 		
-		int result = studentDao.insert(student);
+		System.out.println("Data is Changed : " + result);
 		
-		System.out.println("Student Added :" + result);
-//		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);	
-//		String query = "insert into student(id, name, city) values(?,?,?)";
-//		int result = template.update(query, 45, "Ulka Rajput", "Pune");
-//		System.out.println("Number of Record inserted : " + result);
+		
+
 	}
 }

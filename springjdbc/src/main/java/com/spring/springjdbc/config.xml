@@ -26,10 +26,11 @@
 		name="jdbcTemplate" p:dataSource-ref="ds">
 	</bean>
 
-   <bean class ="com.spring.springjdbc.dao.StudentDaoImp" name ="studentDao">
-   <property name="jdbcTemplate"  ref ="jdbcTemplate"/>
-   
-   
-   </bean>
+	<bean class="com.spring.springjdbc.dao.StudentDaoImp"
+		name="studentDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+
+
+	</bean>
 
 </beans>
