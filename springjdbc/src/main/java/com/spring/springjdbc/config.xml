@@ -11,8 +11,9 @@
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		name="ds">
-		<property name="drivarClassName"
-			value="com.mysql.jdbc.Driver" />
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/springjdbc" />
 		<property name="username" value="root" />
@@ -22,8 +23,8 @@
 	</bean>
 
 	<bean class="org.springframework.jdbc.core.JdbcTemplate"
-		name="jdbcTemplate" p:dataSourse-ref="ds">
-
+		name="jdbcTemplate" p:dataSource-ref="ds">
 	</bean>
+
 
 </beans>
