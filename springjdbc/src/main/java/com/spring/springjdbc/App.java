@@ -15,24 +15,30 @@ public class App {
 
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
 
-//		Student student = new Student();
-//		student.setId(39);
-//		student.setName("Mayur Rajput");
-//		student.setCity("Pune");
-//
-//		int result = studentDao.insert(student);
-//
-//		System.out.println("Student Added :" + result);
-		
-		Student student = new Student();
-		student.setId(47);
-		student.setName("Vidya Rajput");
-		student.setCity("Ghoti");
-		int  result = studentDao.updation(student); 
-		
-		System.out.println("Data is Changed : " + result);
-		
-		
+//		Insert Operation :-
 
+		Student student = new Student();
+		student.setId(85);
+		student.setName("Mayur Rajput");
+		student.setCity("Pune");
+		int result = studentDao.insert(student);
+		System.out.println("Student Added :" + result);
+		
+//		Update Operation :-
+
+//		Student student = new Student();
+//		student.setId(47);
+//		student.setName("Vidya Rajput");
+//		student.setCity("Ghoti");
+//		int  result = studentDao.updation(student); 
+//		
+//		System.out.println("Data is Changed : " + result);
+	
+		
+//		Delete Operation :-
+		
+//		int result = studentDao.delete(39);
+//		System.out.println("Deleted : " + result);
+		
 	}
 }
